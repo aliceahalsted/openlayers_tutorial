@@ -46,7 +46,7 @@ const biodiversityLayer =
   new VectorLayer({
     source: new VectorSource({
       format: new GeoJSON(),
-      url: './data/Biodiversity_Hotspots_Simplify.geojson',
+      url: '/Biodiversity_Hotspots_Simplify.geojson',
     }),
     style: function (feature) {
       if(feature.get('Type')==='outer limit'){
