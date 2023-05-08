@@ -1,0 +1,17 @@
+{
+  "name": "options.force",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "colormap": "^2.3.2",
+    "ol": "latest",
+    "ol-mapbox-style": "^10.5.0"
+  }
+}
