@@ -7,6 +7,7 @@ import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import {Fill, Stroke, Style} from 'ol/style.js';
 import colormap from 'colormap';
+import {defaults as defaultControls} from 'ol/control.js';
 
 //Elements that make up the popup.
 const container = document.getElementById('popup');
@@ -47,6 +48,7 @@ const biodiversityLayer =
     source: new VectorSource({
       format: new GeoJSON(),
       url: '/Biodiversity_Hotspots_Simplify.geojson',
+      attributions: 'Conservation International'
     }),
     style: function (feature) {
       if(feature.get('Type')==='outer limit'){
@@ -74,9 +76,11 @@ const biodiversityLayer =
 
 biodiversityLayer.setOpacity(0.6);
 
+
 const map = new Map({
   target: 'map',
   overlays: [overlay],
+  controls: defaultControls({attribution: true}),
   view: new View({
     center: [0, 0],
     zoom: 2
