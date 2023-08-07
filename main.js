@@ -48,7 +48,7 @@ const biodiversityLayer =
     source: new VectorSource({
       format: new GeoJSON(),
       url: '/Biodiversity_Hotspots_Simplify.geojson',
-      attributions: 'Conservation International'
+      attributions: '| Data from Conservation International | Map by Alicea Halsted'
     }),
     style: function (feature) {
       if(feature.get('Type')==='outer limit'){
